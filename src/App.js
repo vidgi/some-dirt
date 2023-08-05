@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React, { Suspense } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 // import { Wave } from "./Wave";
@@ -7,7 +7,7 @@ import {
   // Text,
   // Decal,
   Edges,
-  Sparkles,
+  // Sparkles,
   // Caustics,
   Environment,
   OrbitControls,
