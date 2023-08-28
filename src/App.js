@@ -29,6 +29,9 @@ import {
 // import coral from "./coral_blender.glb";
 // import coral2 from "./coral_blender2.glb";
 import coral3 from "./dirt_blend.glb";
+import texture from "./texture.hdr";
+import waternormals from "./waternormals.jpg";
+
 import { LayerMaterial, Color, Depth, Noise } from "lamina";
 import "./App.css";
 
@@ -87,12 +90,12 @@ export default function App() {
           <Ocean
             options={{ waterColor: 0x444444 }}
             dimensions={[10000, 10000]}
-            normals="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/waternormals.jpg"
+            normals={waternormals}
             distortionScale={20}
             size={10}
             position={[0, -6, 0]}
           ></Ocean>
-          <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/industrial_workshop_foundry_1k.hdr" />
+          <Environment files={texture} />
           <Coral color={"white"} url={coral3} scale={25} rotation={[0, 0, 0]} position={[-5, 4, -2]} />
           <Coral color={"white"} url={coral3} scale={30} rotation={[Math.PI / 6, Math.PI / 6, 0]} position={[60, 20, -2]} />
           <Coral color={"white"} url={coral3} scale={20} rotation={[-Math.PI / 3, Math.PI / 3, 0]} position={[30, 3, -40]} />
